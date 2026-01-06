@@ -38,3 +38,14 @@ Supported flags:
 ## Wordlists
 
 The tool does not assume any embedded wordlists. You must supply one using `-w/--wordlist`, and you can override specific dork categories via the `--wordlist-*` flags (seen above).
+
+## Dork Formats
+
+The generated links use the following formats.
+
+| Service | Format |
+| --- | --- |
+| GitHub | `"<word>" "<organization>"` |
+| Google | `"<word>" site:<organization>` |
+| Shodan | `"<word>" hostname:"<organization>"` |
+| Wayback | `<organization> <word>` |

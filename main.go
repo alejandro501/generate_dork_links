@@ -219,7 +219,7 @@ func buildDorkURL(dtype, encodedTerm, org string) string {
 	case "google":
 		return fmt.Sprintf("%s%s%%22+site:%s%s", sources[dtype].start, encodedTerm, org, sources[dtype].end)
 	case "shodan":
-		return fmt.Sprintf("%s%s+hostname:\"%s\"%s", sources[dtype].start, encodedTerm, org, sources[dtype].end)
+		return fmt.Sprintf("%s%s%%22+hostname:\"%s\"%s", sources[dtype].start, encodedTerm, org, sources[dtype].end)
 	case "wayback":
 		return fmt.Sprintf("%s%s%%20%s%s", sources[dtype].start, org, encodedTerm, sources[dtype].end)
 	default:
