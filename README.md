@@ -22,7 +22,7 @@ Supported flags:
 | --- | --- |
 | `--organization` | Specify a single organization to target. |
 | `--list` | Path to a newline separated file with organizations. |
-| `--output` | Word to prefix generated filenames inside `./dorking`. |
+| `--output` | Word to prefix generated filenames inside `./dorking/<type>/`. |
 | `--output-github`, `--output-google`, `--output-shodan`, `--output-wayback` | Override the destination file for each product. |
 | `-w`, `--wordlist` | Wordlist file used for every enabled dork type (like `ffuf -w`). |
 | `--wordlist-github` (`-wGh`), `--wordlist-google` (`-wGg`), `--wordlist-shodan` (`-wSh`), `--wordlist-wayback` (`-wWb`) | Override the wordlist for a specific dork type. |
@@ -33,7 +33,7 @@ Supported flags:
 | Variable | Purpose |
 | --- | --- |
 | `TARGET` | Base directory used when `DORKING` is unspecified. Defaults to the current working directory. |
-| `DORKING` | Directory where generated links are written. Falls back to `${TARGET}/dorking`. |
+| `DORKING` | Base directory where generated links are written by type (for example, `${DORKING}/github/...`). Falls back to `${TARGET}/dorking`. |
 
 ## Wordlists
 

@@ -232,7 +232,7 @@ func defaultOutputPath(baseDir, org, dtype, prefix string) string {
 	if prefix != "" {
 		name = fmt.Sprintf("%s_%s", prefix, org)
 	}
-	return filepath.Join(baseDir, fmt.Sprintf("%s_%s_dork_links.txt", name, dtype))
+	return filepath.Join(baseDir, dtype, fmt.Sprintf("%s_%s_dork_links.txt", name, dtype))
 }
 
 func fileExists(path string) bool {
